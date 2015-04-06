@@ -1,0 +1,40 @@
+<script>
+(function()
+{
+  var answer = 'right';
+  var answer1 = 'black';
+  var guess = prompt('In which hand I am holding a chess piece?');
+
+    if (guess == answer) {
+    var guess1 = prompt('That is right; now what is the color?');
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+    if (guess1 === answer1) {
+    var guess2 = prompt('You got it! Guess what chess piece it is?');
+
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+  pieces = ["king", "queen", "bishop", "knight", "rook", "pawn"]
+
+  var answer2 = pieces [2];
+
+    if (guess2 === answer2) {
+      alert('You got it! You win the game!');
+
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+
+
+}
+
+  )();
+</script>
