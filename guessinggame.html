@@ -1,8 +1,25 @@
 <script>
 (function()
 {
-  var answer = 'right';
-  var answer1 = 'black';
+  var Game = function() {
+	hands = ["right", "left"];
+	this.hand = hands[Math.floor(Math.random()*2)];
+
+    colors = ["white", "black"];
+    this.color = colors[Math.floor(Math.random()*2)];
+
+    pieces = ["king", "queen", "bishop", "knight", "rook", "pawn"]
+    this.piece = pieces[Math.floor(Math.random()*6)];
+
+  }
+
+  var game = new Game();
+
+  var answer = game.hand;
+  var answer1 = game.color;
+  var answer2 = game.piece;
+
+
   var guess = prompt('In which hand I am holding a chess piece?');
 
     if (guess == answer) {
@@ -20,9 +37,6 @@
       return;
     }
 
-  pieces = ["king", "queen", "bishop", "knight", "rook", "pawn"]
-
-  var answer2 = pieces [2];
 
     if (guess2 === answer2) {
       alert('You got it! You win the game!');
