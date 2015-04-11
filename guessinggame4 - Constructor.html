@@ -1,0 +1,54 @@
+<script>
+(function()
+{
+  var Game = function() {
+	hands = ["right", "left"];
+	this.hand = hands[Math.floor(Math.random()*2)];
+
+    colors = ["white", "black"];
+    this.color = colors[Math.floor(Math.random()*2)];
+
+    pieces = ["king", "queen", "bishop", "knight", "rook", "pawn"]
+    this.piece = pieces[Math.floor(Math.random()*6)];
+
+  }
+
+  var game = new Game();
+
+  var answer = game.hand;
+  var answer1 = game.color;
+  var answer2 = game.piece;
+
+
+  var guess = prompt('In which hand I am holding a chess piece?');
+
+    if (guess == answer) {
+    var guess1 = prompt('That is right; now what is the color?');
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+    if (guess1 === answer1) {
+    var guess2 = prompt('You got it! Guess what chess piece it is?');
+
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+
+    if (guess2 === answer2) {
+      alert('You got it! You win the game!');
+
+       } else {
+      alert('Wrong, you lose!');
+      return;
+    }
+
+
+
+}
+
+  )();
+</script>
